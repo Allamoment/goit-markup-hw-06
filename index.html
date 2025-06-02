@@ -24,13 +24,15 @@
     <header class="main-header">
         <div class="container header-flex">
             <nav class="main-nav">
-                <a href="./index.html" class="main-logo logo">Web<span class="logo-span">Studio</span></a>
-                <button class="mobile-menu-btn" type="button">
-                    <svg class="mobile-menu-icon" width="18" height="16">
-                        <use href="./images/icons.svg#icon-menu"></use>
+                <a href="./index.html" class="logo">Web<span class="logo-span">Studio</span></a>
+                <button type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" class="mobile-menu-btn">
+                    <span>
+                        <svg width="16.8" height="14.4" class="mobile-menu-icon">
+                            <use href="./images/icons.svg#icon-menu"></use>
                         </svg>
-
-                </button>
+                    </span>
+                    </button>
+                    
                 <ul class="nav-list main-menu">
                     <li><a href="./index.html" class="nav-link current">Studio</a></li>
                     <li><a href="" class="nav-link">Portfolio</a></li>
@@ -103,7 +105,7 @@
             </div>
         </section>
 
-        <!-- <section class="team-section">
+        <section class="team-section">
             <div class="container column">
                 <h2 class="team-title">Our Team</h2>
                 <ul class="team-list">
@@ -145,6 +147,17 @@
                         </div>
                     </li>
                     <li class="team-item">
+
+                        <picture>
+                            <source srcset="../ 1x, ../images/retina-picture/img-desktop@2x.jpg 2x"
+                                media="(min-width: 1200px)" />
+                            <source srcset="../images/retina-picture/img-tablet.jpg 1x, ../images/retina-picture/img-tablet@2x.jpg 2x"
+                                media="(min-width: 768px)" />
+                            <source srcset="../images/retina-picture/img-mobile.jpg 1x, ../images/retina-picture/img-mobile@2x.jpg 2x"
+                                media="(max-width: 767px)" />
+                        
+                            <img src="../images/retina-picture/img-mobile.jpg" alt="retina image" />              
+                        </picture>
                         <img src="./images/tom-ford.jpg" alt="Tom Ford" width="264">
                         <div class="team-box">
                             <h3 class="team-name">Tom Ford</h3>
@@ -257,12 +270,104 @@
                     </li>
                 </ul>
             </div>
-        </section> -->
+            <section class="portfolio-section" id="portfolio">
+                <div class="container column">
+                    <h2 class="portfolio-title">Our Portfolio</h2>
+                    <ul class="portfolio-list">
+                        <li class="portfolio-item">
+                            <div class="portfolio-thumb">
+                                <img src="./images/banking-app.jpg" alt="Banking App" width="360">
+                                <p class="portfolio-desc">14 Stylish and User-Friendly App Design Concepts · Task Manager
+                                    App · Calorie Tracker App ·
+                                    Exotic Fruit Ecommerce App ·
+                                    Cloud Storage App
+                                </p>
+                            </div>
+                            <div class="portfolio-box">
+                                <h3 class="card-title">Banking App</h3>
+                                <p class="card-text">App</p>
+                            </div>
+                        </li>
+            
+                        <li class="portfolio-item">
+                            <div class="portfolio-thumb">
+                                <img src="./images/cashless-payment.jpg" alt="Cashless Payment" width="360">
+                                <p class="portfolio-desc">14 Stylish and User-Friendly App Design Concepts · Task Manager
+                                    App · Calorie
+                                    Tracker App · Exotic Fruit Ecommerce App ·
+                                    Cloud Storage App
+                                </p>
+                            </div>
+                            <div class="portfolio-box">
+                                <h3 class="card-title">Cashless Payment</h3>
+                                <p class="card-text">Marketing</p>
+                            </div>
+                        </li>
+            
+                        <li class="portfolio-item">
+                            <div class="portfolio-thumb">
+                                <img src="./images/meditation-app.jpg" alt="Meditation App" width="360">
+                                <p class="portfolio-desc">14 Stylish and User-Friendly App Design Concepts · Task Manager
+                                    App · Calorie
+                                    Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
+                                </p>
+                            </div>
+                            <div class="portfolio-box">
+                                <h3 class="card-title">Meditation App</h3>
+                                <p class="card-text">App</p>
+                            </div>
+                        </li>
+            
+                        <li class="portfolio-item">
+                            <div class="portfolio-thumb">
+                                <img src="./images/taxi-service.jpg" alt="Taxi Service" width="360">
+                                <p class="portfolio-desc">14 Stylish and User-Friendly App Design Concepts · Task Manager
+                                    App · Calorie
+                                    Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
+                                </p>
+                            </div>
+                            <div class="portfolio-box">
+                                <h3 class="card-title">Taxi Service</h3>
+                                <p class="card-text">Marketing</p>
+                            </div>
+                        </li>
+            
+                        <li class="portfolio-item">
+                            <div class="portfolio-thumb">
+                                <img src="./images/screen-illustrations.jpg" alt="Screen Illustrations" width="360">
+                                <p class="portfolio-desc">14 Stylish and User-Friendly App Design Concepts · Task Manager
+                                    App · Calorie
+                                    Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
+                                </p>
+                            </div>
+                            <div class="portfolio-box">
+                                <h3 class="card-title">Screen Illustrations</h3>
+                                <p class="card-text">Design</p>
+                            </div>
+                        </li>
+            
+                        <li class="portfolio-item">
+                            <div class="portfolio-thumb">
+                                <img src="./images/online-courses.jpg" alt="Online Courses" width="360">
+                                <p class="portfolio-desc">14 Stylish and User-Friendly App Design Concepts · Task Manager
+                                    App · Calorie
+                                    Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
+                                </p>
+                            </div>
+                            <div class="portfolio-box">
+                                <h3 class="card-title">Online Courses</h3>
+                                <p class="card-text">Marketing</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                </section>
+        </section>
 
         
     </main>
 
-        <!-- <footer class="main-footer">
+        <footer class="main-footer">
             <div class="container footer-container baseline ">
                 <div class="footer-wrapper">
                     <a class="footer-logo" href="./index.html">Web<span class="footer-logo-span">Studio</span></a>
@@ -318,9 +423,9 @@
                     </form>         
                  </div>
                 </div>
-    </footer> -->
+    </footer>
         
-    <!-- <div class="backdrop is-open">
+    <div class="backdrop is-open">
         <div class="modal">
             <button type="button" class="modal__close" data-modal-close>
                 <svg class="modal__icon-close" width="8" height="8">
@@ -383,6 +488,6 @@
                 <button type="submit" class="modal-form-btn">Send</button>
             </form>
         </div>
-    </div> -->
+    </div>
         </body>
         </html>
