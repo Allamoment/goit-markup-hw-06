@@ -32,87 +32,68 @@
                             <use href="./images/icons.svg#icon-menu"></use>
                         </svg>
                     </button>
-                    
+                
+                    <ul class="nav-list main-menu">
+                        <li><a href="./index.html" class="nav-link current">Studio</a></li>
+                        <li><a href="" class="nav-link">Portfolio</a></li>
+                        <li><a href="" class="nav-link">Contacts</a></li>
+                    </ul>
+                    </nav>
+                    <address class="address main-address">
+                        <ul class="address-list">
+                            <li><a href="mailto:info@devstudio.com" class="address-link contact-link">info@devstudio.com</a>
+                            </li>
+                            <li><a href="tel:+110001111111" class="address-link contact-link">+11 (000) 111-11-11</a></li>
+                        </ul>
+                        </address>
                     </div>
                     
-                    <!-- Мобільне меню -->
-                    <div class="mobile-menu-container is-hidden" id="mobile-menu">
-                        <div class="mobile-menu-inner">
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu-container" data-menu>
+                        <button class="mobile-menu-close" type="button" data-menu-close>
+                            <svg class="modal__icon-close" width="8" height="8">
+                                <use href="./images/icons.svg#icon-close"></use>
+                            </svg>
+                        </button>
                     
-                            <!-- Кнопка закриття -->
-                            <button type="button" class="mobile-menu-close" aria-label="Close menu">
-                                <svg width="8" height="8">
-                                    <use href="./images/icons.svg#icon-close"></use>
-                                </svg>
-                            </button>
+                        <ul class="mobile-nav-list">
+                            <li><a href="index.html" class="mobile-nav-link current">Studio</a></li>
+                            <li><a href="#" class="mobile-nav-link">Portfolio</a></li>
+                            <li><a href="#" class="mobile-nav-link">Contacts</a></li>
+                        </ul>
                     
-                            <!-- Навігація мобільна -->
-                            <nav class="mobile-nav">
-                                <ul class="mobile-nav-list">
-                                    <li><a href="./index.html" class="mobile-nav-link current">Studio</a></li>
-                                    <li><a href="#" class="mobile-nav-link">Portfolio</a></li>
-                                    <li><a href="#" class="mobile-nav-link">Contacts</a></li>
-                                </ul>
-                            </nav>
-                    
-                            <!-- Контакти мобільні -->
-                            <address class="mobile-address">
-                                <a href="tel:+110001111111" class="mobile-contact phone">+11 (000) 111-11-11</a>
-                                <a href="mailto:info@devstudio.com" class="mobile-contact email">info@devstudio.com</a>
-                            </address>
-                    
-                            <!-- Соціальні мережі -->
-                            <ul class="mobile-socials">
-                                <li>
-                                    <a href="#" class="mobile-social-link" aria-label="Instagram">
-                                        <svg width="24" height="24">
-                                            <use href="./images/icons.svg#icon-instagram"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="mobile-social-link" aria-label="Twitter">
-                                        <svg width="24" height="24">
-                                            <use href="./images/icons.svg#icon-twitter"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="mobile-social-link" aria-label="Facebook">
-                                        <svg width="24" height="24">
-                                            <use href="./images/icons.svg#icon-facebook"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="mobile-social-link" aria-label="LinkedIn">
-                                        <svg width="24" height="24">
-                                            <use href="./images/icons.svg#icon-linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                    
-                        </div>
+                        <div class="mobile-address">
+                            <a href="tel:+110001111111" class="mobile-contact phone">+11 (000) 111-11-11</a>
+                            <a href="mailto:info@devstudio.com" class="mobile-contact email">info@devstudio.com</a>
                         </div>
                     
-                    
-                <ul class="nav-list main-menu">
-                    <li><a href="./index.html" class="nav-link current">Studio</a></li>
-                    <li><a href="" class="nav-link">Portfolio</a></li>
-                    <li><a href="" class="nav-link">Contacts</a></li>
-                </ul>
-            </nav>
-            <address class="address main-address">
-                <ul class="address-list">
-                    <li><a href="mailto:info@devstudio.com" class="address-link contact-link">info@devstudio.com</a>
-                    </li>
-                    <li><a href="tel:+110001111111" class="address-link contact-link">+11 (000) 111-11-11</a></li>
-                </ul>
-            </address>
-        </div>
-    </header>
-    <main>
+                        <ul class="mobile-socials">
+                            <li><a href="#" class="mobile-social-link" aria-label="Instagram">
+                                    <svg width="24" height="24">
+                                        <use href="./images/icons.svg#icon-instagram"></use>
+                                    </svg></a></li>
+                            <li><a href="#" class="mobile-social-link" aria-label="Twitter">
+                                    <svg width="24" height="24">
+                                        <use href="./images/icons.svg#icon-twitter"></use>
+                                    </svg></a></li>
+                            <li><a href="#" class="mobile-social-link" aria-label="Facebook">
+                                    <svg width="24" height="24">
+                                        <use href="./images/icons.svg#icon-facebook"></use>
+                                    </svg></a></li>
+                            <li><a href="#" class="mobile-social-link" aria-label="LinkedIn">
+                                    <svg width="24" height="24">
+                                        <use href="./images/icons.svg#icon-linkedin"></use>
+                                    </svg></a></li>
+                        </ul>
+                    </div>
+              </header>
+           
+              <main>
+        <section class="hero-section">
+            <div class="container column">
+                <h1 class="hero-title">Effective Solutions for Your Business</h1>
+                <button type="button" class="hero-button">Order Service</button>
+            </div>
         </section>
 
         <section class="goal-section">
