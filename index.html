@@ -25,13 +25,65 @@
         <div class="container header-flex">
             <nav class="main-nav">
                 <a href="./index.html" class="logo">Web<span class="logo-span">Studio</span></a>
-                <button type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" class="mobile-menu-btn">
-                    <span>
-                        <svg width="16.8" height="14.4" class="mobile-menu-icon">
-                            <use href="./images/icons.svg#icon-menu"></use>
-                        </svg>
-                    </span>
-                    </button>
+                <!-- Mobile Menu -->
+                <div class="mobile-menu-container is-hidden" id="mobile-menu">
+                    <div class="mobile-menu-inner">
+                        <button type="button" class="mobile-menu-close" aria-label="Закрити мобільне меню" aria-expanded="true"
+                            aria-controls="mobile-menu">
+                            <svg class="mobile-menu-close-icon" width="8" height="8">
+                                <use href="./images/icons.svg#icon-close"></use>
+                            </svg>
+                        </button>
+                
+                        <nav class="mobile-nav">
+                            <ul class="mobile-nav-list">
+                                <li><a href="./index.html" class="mobile-nav-link current">Studio</a></li>
+                                <li><a href="" class="mobile-nav-link">Portfolio</a></li>
+                                <li><a href="" class="mobile-nav-link">Contacts</a></li>
+                            </ul>
+                        </nav>
+                
+                        <div class="mobile-menu-bottom">
+                            <address class="mobile-address">
+                                <ul class="mobile-address-list">
+                                    <li><a href="tel:+110001111111" class="mobile-contact phone">+11 (000) 111-11-11</a></li>
+                                    <li><a href="mailto:info@devstudio.com" class="mobile-contact email">info@devstudio.com</a></li>
+                                </ul>
+                            </address>
+                
+                            <ul class="mobile-socials">
+                                <li>
+                                    <a href="" class="mobile-social-link" aria-label="Instagram">
+                                        <svg width="24" height="24">
+                                            <use href="./images/icons.svg#icon-instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="mobile-social-link" aria-label="Twitter">
+                                        <svg width="24" height="24">
+                                            <use href="./images/icons.svg#icon-twitter"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="mobile-social-link" aria-label="Facebook">
+                                        <svg width="24" height="24">
+                                            <use href="./images/icons.svg#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="mobile-social-link" aria-label="LinkedIn">
+                                        <svg width="24" height="24">
+                                            <use href="./images/icons.svg#icon-linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
                     
                 <ul class="nav-list main-menu">
                     <li><a href="./index.html" class="nav-link current">Studio</a></li>
@@ -109,59 +161,23 @@
             <div class="container column">
                 <h2 class="team-title">Our Team</h2>
                 <ul class="team-list">
-                    <li class="team-item">
-                        <img src="./images/mark-guerrero.jpg" alt="Mark Guerrero" width="264">
-                        <div class="team-box">
-                            <h3 class="team-name">Mark Guerrero</h3>
-                            <p class="team-position">Product Designer</p>
-                            <ul class="social-list">
-                                <li class="social-item">
-                                    <a class="social-link" href="#" aria-label="instagram"><svg class="social-icon"
-                                            width="16" height="16">
-                                            <use href="./images/icons.svg#icon-instagram"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="social-item">
-                                    <a class="social-link" href="#" aria-label="twitter"><svg class="social-icon"
-                                            width="16" height="16">
-                                            <use href="./images/icons.svg#icon-twitter"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="social-item">
-                                    <a class="social-link" href="#" aria-label="facebook"><svg class="social-icon"
-                                            width="16" height="16">
-                                            <use href="./images/icons.svg#icon-facebook"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="social-item">
-                                    <a class="social-link" href="#" aria-label="linkedin"><svg class="social-icon"
-                                            width="16" height="16">
-                                            <use href="./images/icons.svg#icon-linkedin"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="team-item">
+                <!-- Mark Guerrero -->
+                <li class="team-item">
+                    <picture>
+<!-- Десктоп -->
+<source srcset="./images/retina/desk/mark-guerrero@1x.jpg 1x, ./images/retina/desk/mark-guerrero@2x.jpg 2x"
+    media="(min-width: 1158px)">
 
-                        <picture>
-                            <source srcset="../ 1x, ../images/retina-picture/img-desktop@2x.jpg 2x"
-                                media="(min-width: 1200px)" />
-                            <source srcset="../images/retina-picture/img-tablet.jpg 1x, ../images/retina-picture/img-tablet@2x.jpg 2x"
-                                media="(min-width: 768px)" />
-                            <source srcset="../images/retina-picture/img-mobile.jpg 1x, ../images/retina-picture/img-mobile@2x.jpg 2x"
-                                media="(max-width: 767px)" />
-                        
-                            <img src="../images/retina-picture/img-mobile.jpg" alt="retina image" />              
-                        </picture>
-                        <img src="./images/tom-ford.jpg" alt="Tom Ford" width="264">
-                        <div class="team-box">
-                            <h3 class="team-name">Tom Ford</h3>
-                            <p class="team-position">Frontend Developer</p>
+<!-- Планшет -->
+<source srcset="./images/retina/tablet/mark-guerrero@1x.jpg 1x, ./images/retina/tablet/mark-guerrero@2x.jpg 2x "
+    media="(min-width: 768px)">
+
+                        <source srcset="./images/retina/mobile/mark-guerrero@1x.jpg 1x, ./images/retina/mobile/mark-guerrero@2x.jpg 2x">
+                        <img src="./images/retina/mobile/mark-guerrero.jpg" alt="Mark Guerrero" width="264">
+                    </picture>
+                    <div class="team-box">
+                        <h3 class="team-name">Mark Guerrero</h3>
+                        <p class="team-position">Product Designer</p>
                             <ul class="social-list">
                                 <li class="social-item">
                                     <a class="social-link" href="#" aria-label="instagram"><svg class="social-icon"
@@ -195,10 +211,74 @@
                         </div>
                     </li>
                     <li class="team-item">
-                        <img src="./images/camila-garcia.jpg" alt="Camila Garcia" width="264">
-                        <div class="team-box">
-                            <h3 class="team-name">Camila Garcia</h3>
-                            <p class="team-position">Marketing</p>
+<!-- Tom Ford -->
+<li class="team-item">
+    <picture>
+
+        <!-- Десктоп -->
+        <source srcset="./images/retina/desk/tom-ford@1x.jpg 1x, ./images/retina/desk/tom-ford@2x.jpg 2x"
+            media="(min-width: 1158px)">
+        
+        <!-- Планшет -->
+        <source srcset="./images/retina/tablet/tom-ford@1x.jpg 1x, ./images/retina/tablet/tom-ford@2x.jpg 2x "
+            media="(min-width: 768px)">
+
+        <source srcset="./images/retina/mobile/tom-ford@1x.jpg 1x, ./images/retina/mobile/tom-ford@2x.jpg 2x">
+        <img src="./images/retina/mobile/tom-ford.jpg" alt="Tom Ford" width="264">
+    </picture>
+    <div class="team-box">
+        <h3 class="team-name">Tom Ford</h3>
+        <p class="team-position">Frontend Developer</p>
+                            <ul class="social-list">
+                                <li class="social-item">
+                                    <a class="social-link" href="#" aria-label="instagram"><svg class="social-icon"
+                                            width="16" height="16">
+                                            <use href="./images/icons.svg#icon-instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="social-link" href="#" aria-label="twitter"><svg class="social-icon"
+                                            width="16" height="16">
+                                            <use href="./images/icons.svg#icon-twitter"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="social-link" href="#" aria-label="facebook"><svg class="social-icon"
+                                            width="16" height="16">
+                                            <use href="./images/icons.svg#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="social-link" href="#" aria-label="linkedin"><svg class="social-icon"
+                                            width="16" height="16">
+                                            <use href="./images/icons.svg#icon-linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="team-item">
+                        <!-- Camila Garcia -->
+                        <li class="team-item">
+                            <picture>
+                        <!-- Десктоп -->
+                        <source srcset="./images/retina/desk/camila-garcia@1x.jpg 1x, ./images/retina/desk/camila-garcia@2x.jpg 2x"
+                            media="(min-width: 1158px)">
+                        
+                        <!-- Планшет -->
+                        <source srcset="./images/retina/tablet/camila-garcia@1x.jpg 1x, ./images/retina/tablet/camila-garcia@2x.jpg 2x "
+                            media="(min-width: 768px)">
+
+                                <source srcset="./images/retina/mobile/camila-garcia.jpg@1x.jpg 1x, ./images/retina/mobile/camila-garcia.jpg@2x.jpg 2x">
+                                <img src="./images/retina/mobile/camila-garcia.jpg" alt="Camila Garcia" width="264">
+                            </picture>
+                            <div class="team-box">
+                                <h3 class="team-name">Camila Garcia</h3>
+                                <p class="team-position">Marketing</p>
                             <ul class="social-list">
                                 <li class="social-item">
                                     <a class="social-link" href="#" aria-label="instagram"><svg class="social-icon"
@@ -232,10 +312,24 @@
                         </div>
                     </li>
                     <li class="team-item">
-                        <img src="./images/daniel-wilson.jpg" alt="Daniel Wilson" width="264">
-                        <div class="team-box">
-                            <h3 class="team-name">Daniel Wilson</h3>
-                            <p class="team-position">UI Designer</p>
+                        <!-- Daniel Wilson -->
+                        <li class="team-item">
+                            <picture>
+                                <!-- Десктоп -->
+                                <source srcset="./images/retina/desk/daniel-wilson@1x.jpg 1x, ./images/retina/desk/daniel-wilson@2x.jpg 2x"
+                                    media="(min-width: 1158px)">
+                                
+                                <!-- Планшет -->
+                                <source srcset="./images/retina/tablet/daniel-wilson.jpg@1x.jpg 1x, ./images/retina/tablet/daniel-wilson.jpg@2x.jpg 2x "
+                                    media="(min-width: 768px)">
+
+                                <source srcset="./images/retina/mobile/daniel-wilson.jpg@1x.jpg 1x, ./images/retina/mobile/daniel-wilson.jpg@2x.jpg 2x">
+                                <img src="./images/retina/mobile/daniel-wilson.jpg" alt="Daniel Wilson" width="264">
+                            </picture>
+
+                            <div class="team-box">
+                                <h3 class="team-name">Daniel Wilson</h3>
+                                <p class="team-position">UI Designer</p>
                             <ul class="social-list">
                                 <li class="social-item">
                                     <a class="social-link" href="#" aria-label="instagram"><svg class="social-icon"
@@ -276,7 +370,20 @@
                     <ul class="portfolio-list">
                         <li class="portfolio-item">
                             <div class="portfolio-thumb">
-                                <img src="./images/banking-app.jpg" alt="Banking App" width="360">
+                                <picture>
+                                    <!-- Десктоп -->
+                                    <source srcset="./images/retina/desk/banking-app@1x.jpg 1x, ./images/retina/desk/banking-app@2x.jpg 2x"
+                                        media="(min-width: 1158px)">
+                                
+                                    <!-- Планшет -->
+                                    <source srcset="./images/retina/tablet/banking-app@1x.jpg 1x, ./images/retina/tablet/banking-app@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                
+                                    <!-- Мобілка (за замовчуванням) -->
+                                    <img src="./images/retina/mobile/banking-app.jpg"
+                                        srcset="./images/retina/mobile/banking-app@1x.jpg 1x, ./images/retina/mobile/banking-app@2x.jpg 2x"
+                                        alt="Banking App" width="360">                        
+                                    </picture>
                                 <p class="portfolio-desc">14 Stylish and User-Friendly App Design Concepts · Task Manager
                                     App · Calorie Tracker App ·
                                     Exotic Fruit Ecommerce App ·
@@ -291,7 +398,21 @@
             
                         <li class="portfolio-item">
                             <div class="portfolio-thumb">
-                                <img src="./images/cashless-payment.jpg" alt="Cashless Payment" width="360">
+                                <picture>
+                                    <!-- Десктоп -->
+                                    <source srcset="./images/retina/desk/cashless-payment@1x.jpg 1x, ./images/retina/desk/cashless-payment@2x.jpg 2x"
+                                        media="(min-width: 1158px)">
+                                
+                                    <!-- Планшет -->
+                                    <source srcset="./images/retina/tablet/cashless-payment@1x.jpg 1x, ./images/retina/tablet/cashless-payment@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                
+                                    <!-- Мобілка (за замовчуванням) -->
+                                    <img src="./images/retina/mobile/cashless-payment.jpg"
+                                        srcset="./images/retina/mobile/cashless-payment@1x.jpg 1x, ./images/retina/mobile/cashless-payment@2x.jpg 2x"
+                                        alt="Cashless Payment" width="360">                       
+                                     </picture>
+
                                 <p class="portfolio-desc">14 Stylish and User-Friendly App Design Concepts · Task Manager
                                     App · Calorie
                                     Tracker App · Exotic Fruit Ecommerce App ·
@@ -306,7 +427,21 @@
             
                         <li class="portfolio-item">
                             <div class="portfolio-thumb">
-                                <img src="./images/meditation-app.jpg" alt="Meditation App" width="360">
+                                <picture>
+                                    <!-- Десктоп -->
+                                    <source srcset="./images/retina/desk/meditation-app@1x.jpg 1x, ./images/retina/desk/meditation-app@2x.jpg 2x"
+                                        media="(min-width: 1158px)">
+                                
+                                    <!-- Планшет -->
+                                    <source srcset="./images/retina/tablet/meditation-app@1x.jpg 1x, ./images/retina/tablet/meditation-app@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                
+                                    <!-- Мобілка (за замовчуванням) -->
+                                    <img src="./images/retina/mobile/meditation-app.jpg"
+                                        srcset="./images/retina/mobile/meditation-app@1x.jpg 1x, ./images/retina/mobile/meditation-app@2x.jpg 2x"
+                                        alt="Meditation App" width="360">                        
+                                    </picture>
+
                                 <p class="portfolio-desc">14 Stylish and User-Friendly App Design Concepts · Task Manager
                                     App · Calorie
                                     Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
@@ -320,7 +455,21 @@
             
                         <li class="portfolio-item">
                             <div class="portfolio-thumb">
-                                <img src="./images/taxi-service.jpg" alt="Taxi Service" width="360">
+                                <picture>
+                                    <!-- Десктоп -->
+                                    <source srcset="./images/retina/desk/taxi-service@1x.jpg 1x, ./images/retina/desk/taxi-service@2x.jpg 2x"
+                                        media="(min-width: 1158px)">
+                                
+                                    <!-- Планшет -->
+                                    <source srcset="./images/retina/tablet/taxi-service@1x.jpg 1x, ./images/retina/tablet/taxi-service@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                
+                                    <!-- Мобілка (за замовчуванням) -->
+                                    <img src="./images/retina/mobile/taxi-service.jpg"
+                                        srcset="./images/retina/mobile/taxi-service@1x.jpg 1x, ./images/retina/mobile/taxi-service@2x.jpg 2x"
+                                        alt="Taxi Service" width="360">                       
+                                     </picture>
+                            
                                 <p class="portfolio-desc">14 Stylish and User-Friendly App Design Concepts · Task Manager
                                     App · Calorie
                                     Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
@@ -334,7 +483,21 @@
             
                         <li class="portfolio-item">
                             <div class="portfolio-thumb">
-                                <img src="./images/screen-illustrations.jpg" alt="Screen Illustrations" width="360">
+                                <picture>
+                                    <!-- Десктоп -->
+                                    <source srcset="./images/retina/desk/screen-illustrations@1x.jpg 1x, ./images/retina/desk/screen-illustrations@2x.jpg 2x"
+                                        media="(min-width: 1158px)">
+                                
+                                    <!-- Планшет -->
+                                    <source srcset="./images/retina/tablet/screen-illustrations@1x.jpg 1x, ./images/retina/tablet/screen-illustrations@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                
+                                    <!-- Мобілка (за замовчуванням) -->
+                                    <img src="./images/retina/mobile/screen-illustrations.jpg"
+                                        srcset="./images/retina/mobile/screen-illustrations@1x.jpg 1x, ./images/retina/mobile/screen-illustrations@2x.jpg 2x"
+                                        alt="screen illustrations" width="360">                    
+                                        </picture>
+                                 >
                                 <p class="portfolio-desc">14 Stylish and User-Friendly App Design Concepts · Task Manager
                                     App · Calorie
                                     Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
@@ -348,7 +511,21 @@
             
                         <li class="portfolio-item">
                             <div class="portfolio-thumb">
-                                <img src="./images/online-courses.jpg" alt="Online Courses" width="360">
+                                <picture>
+                                    <!-- Десктоп -->
+                                    <source srcset="./images/retina/desk/online-courses@1x.jpg 1x, ./images/retina/desk/online-courses@2x.jpg 2x"
+                                        media="(min-width: 1158px)">
+                                
+                                    <!-- Планшет -->
+                                    <source srcset="./images/retina/tablet/online-courses@1x.jpg 1x, ./images/retina/tablet/online-courses@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                
+                                    <!-- Мобілка (за замовчуванням) -->
+                                    <img src="./images/retina/mobile/online-courses.jpg"
+                                        srcset="./images/retina/mobile/online-courses@1x.jpg 1x, ./images/retina/mobile/online-courses@2x.jpg 2x"
+                                        alt="Online Courses" width="360">                      
+                                      </picture>
+                    
                                 <p class="portfolio-desc">14 Stylish and User-Friendly App Design Concepts · Task Manager
                                     App · Calorie
                                     Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
