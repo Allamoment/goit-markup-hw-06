@@ -63,10 +63,23 @@ img {
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .main-header .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 16px;
 }
 
@@ -79,7 +92,7 @@ img {
 .container {
   width: 100%;
   max-width: 320;
-  margin: 0 auto;
+  margin-right: 120px;
   padding-top: 16px;
   padding-bottom: 16px;
 }
@@ -388,20 +401,20 @@ img {
   }
 }
 
-.container {
+container-hero {
   max-width: 100%;
   margin: 0 auto;
   padding: 0 16px;
 }
 
 @media screen and (min-width: 768px) {
-  .container {
+  container-hero {
     max-width: 736px;
   }
 }
 
 @media screen and (min-width: 1158px) {
-  .container {
+  container-hero {
     max-width: 1158px;
     padding: 0 15px;
   }
@@ -569,19 +582,6 @@ img {
   }
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .goal-list {
   display: flex;
   flex-direction: column;
@@ -720,16 +720,30 @@ img {
   text-transform: capitalize;
   color: #2e2f42;
 }
-
 .team-list {
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 28px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  gap: 72px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .team-item {
@@ -828,7 +842,7 @@ img {
   }
 }
 
-.container {
+container-portfolio {
   width: 100%;
   max-width: 1158px;
   margin: 0 auto;
@@ -836,7 +850,7 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .container {
+  container-portfolio {
     padding: 0 15px;
   }
 }
@@ -860,18 +874,9 @@ img {
   padding: 0;
   margin: 0;
 }
-
 @media screen and (min-width: 768px) {
   .portfolio-list {
-    gap: 72px 24px;
-    grid-template-columns: repeat(2, 1fr); /* Tablet */
-  }
-}
-
-@media screen and (min-width: 1158px) {
-  .portfolio-list {
-    gap: 48px 24px;
-    grid-template-columns: repeat(3, 1fr); /* Desktop */
+    flex-direction: row;
   }
 }
 
