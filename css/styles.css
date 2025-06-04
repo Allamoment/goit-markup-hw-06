@@ -94,7 +94,7 @@ button {
   padding: 0;
 }
 
-visually-hidden {
+.visually-hidden {
   clip-path: inset(100%) !important;
   position: absolute !important;
   width: 1px !important;
@@ -141,13 +141,14 @@ visually-hidden {
 
 .header-flex {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .main-nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .main-logo {
@@ -207,11 +208,23 @@ visually-hidden {
 
 .address-list {
   display: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 @media screen and (min-width: 768px) {
   .address-list {
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .address-list {
+    flex-direction: row;
     gap: 40px;
   }
 }
@@ -222,6 +235,7 @@ visually-hidden {
   letter-spacing: 0.04em;
   color: var(--slate);
   transition: color 250ms ease-in-out;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 1158px) {
@@ -232,11 +246,18 @@ visually-hidden {
 }
 
 .burger-btn {
+  width: 24px;
+  height: 24px;
   line-height: 0;
   stroke: var(--navy-blue);
   background: transparent;
   border: none;
   cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -257,7 +278,6 @@ visually-hidden {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
   width: 320px;
   height: 432px;
   padding: 72px 16px 96px;
@@ -340,22 +360,24 @@ visually-hidden {
 
 .hero-button {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
+
   padding: 16px 32px;
   width: 169px;
   height: 56px;
   border-radius: 4px;
   background: var(--iris);
   color: var(--white);
+
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
+
   border: none;
   cursor: pointer;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -954,7 +976,6 @@ visually-hidden {
   }
 }
 
-/* === MEDIA 768–1157px (Tablet) === */
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .footer-container {
     flex-direction: row;
@@ -1000,11 +1021,11 @@ visually-hidden {
   pointer-events: none;
 }
 
-.backdrop.is-open {
+/* .backdrop.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-}
+} */
 
 /* --- MODAL --- */
 .modal {
@@ -1044,6 +1065,7 @@ visually-hidden {
   cursor: pointer;
   padding: 0;
   transition: background-color 250ms, border 250ms;
+  z-index: 10;
 }
 
 .modal__close:hover,
@@ -1146,11 +1168,11 @@ visually-hidden {
   outline: none;
 }
 
-/* --- CHECKBOX --- */
+/* --- CHECKBOX + PRIVACY --- */
 .checkbox-group {
   margin-bottom: 24px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .checkbox-label {
@@ -1162,6 +1184,8 @@ visually-hidden {
   display: flex;
   align-items: center;
   cursor: pointer;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .checkbox-span {
@@ -1175,16 +1199,17 @@ visually-hidden {
   margin-right: 8px;
   fill: transparent;
   transition: background-color 250ms, border 250ms, fill 250ms;
+  flex-shrink: 0;
 }
 
 .checkbox-icon {
   fill: transparent;
+  pointer-events: none;
 }
 
 .visually-hidden:checked + .checkbox-label .checkbox-span {
   background-color: var(--accent-color);
   border: none;
-  fill: #f4f4fd;
 }
 
 .visually-hidden:checked + .checkbox-label .checkbox-icon {
@@ -1193,14 +1218,27 @@ visually-hidden {
 
 .privacy-link {
   margin-left: 4px;
-  color: #4d5ae5;
-  text-decoration: none;
+  color: var(--iris);
+  text-decoration: underline;
   transition: color 250ms ease;
 }
 
 .privacy-link:hover,
 .privacy-link:focus {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+  .checkbox-label {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    line-height: 1.4;
+  }
+
+  .privacy-link {
+    word-break: break-word;
+    display: inline;
+  }
 }
 
 /* --- BUTTON --- */
