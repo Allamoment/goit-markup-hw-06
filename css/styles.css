@@ -131,11 +131,13 @@ button {
   height: 56px;
   display: flex;
   align-items: center;
+  padding: 0 16px; /* Відступи для мобільної версії */
 }
 
 @media screen and (min-width: 768px) {
   .main-header {
-    height: 72px;
+    height: 72px; /* Збільшуємо висоту для планшета та десктопа */
+    padding: 0 32px; /* Збільшені відступи для планшета та десктопа */
   }
 }
 
@@ -143,6 +145,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .main-nav {
@@ -152,7 +155,6 @@ button {
 }
 
 .main-logo {
-  margin-right: 76px;
   font-family: var(--second-family);
   font-weight: 700;
   font-size: 18px;
@@ -168,14 +170,41 @@ button {
   color: var(--navy-blue);
 }
 
+/* Мобільна версія: бургер-меню */
+.burger-btn {
+  width: 24px;
+  height: 24px;
+  line-height: 0;
+  stroke: var(--navy-blue);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  align-self: flex-end; /* Вирівнюємо бургер по правому краю */
+}
+
+@media screen and (min-width: 768px) {
+  .burger-btn {
+    display: none; /* Вимикаємо бургер на планшетах та десктопах */
+  }
+}
+
 .nav-list {
   display: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 @media screen and (min-width: 768px) {
   .nav-list {
     display: flex;
     gap: 40px;
+    margin-left: 40px; /* Відступ між елементами навігації */
   }
 }
 
@@ -242,27 +271,6 @@ button {
   .address-link {
     font-size: 16px;
     line-height: 1.5;
-  }
-}
-
-.burger-btn {
-  width: 24px;
-  height: 24px;
-  line-height: 0;
-  stroke: var(--navy-blue);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-}
-
-@media screen and (min-width: 768px) {
-  .burger-btn {
-    display: none;
   }
 }
 
@@ -363,25 +371,23 @@ button {
   align-items: center;
   justify-content: center;
   gap: 10px;
-
   padding: 16px 32px;
   width: 169px;
   height: 56px;
   border-radius: 4px;
   background: var(--iris);
   color: var(--white);
-
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
-
   border: none;
   cursor: pointer;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  flex-direction: row;
 }
 
 .hero-button:hover,
@@ -809,7 +815,8 @@ button {
 .footer-social {
   display: flex;
   flex-direction: column;
-  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
   margin-right: auto;
 }
 
@@ -830,8 +837,8 @@ button {
   margin: 0;
   width: 208px;
   height: 40px;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
 }
 
@@ -930,7 +937,7 @@ button {
   .footer-container {
     flex-direction: column;
     align-items: center;
-    gap: 72px;
+    gap: 32px;
   }
 
   .footer-wrapper {
@@ -1001,6 +1008,35 @@ button {
 
   .footer-button {
     margin: 0;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  .footer-wrapper {
+    text-align: start;
+  }
+
+  .footer-form-container {
+    margin-left: 80px;
+  }
+
+  .footer-subscribe-form {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .footer-input {
+    width: 264px;
+  }
+
+  .footer-button {
+    margin-left: 16px;
   }
 }
 
@@ -1281,8 +1317,14 @@ button {
   justify-content: space-between;
   transform: translateX(100%);
   visibility: hidden;
-  transition: transform var(--transition), visibility var(--transition);
+  transition: transform 0.3s ease-in-out;
   z-index: 9999;
+}
+
+/* Клас для відкритого меню */
+.mobile-menu.is-open {
+  transform: translateX(0);
+  visibility: visible;
 }
 
 .mobile-menu.is-open {
