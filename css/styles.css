@@ -1278,10 +1278,10 @@ button {
   z-index: 9999;
 }
 
-.mobile-menu.is-open {
+/* .mobile-menu.is-open {
   transform: translateX(0);
   visibility: visible;
-}
+} */
 
 .mobile-menu-close {
   position: absolute;
