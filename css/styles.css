@@ -237,6 +237,7 @@ button {
 }
 
 .burger-btn {
+  display: block;
   line-height: 0;
   stroke: var(--navy-blue);
   background: transparent;
@@ -327,11 +328,9 @@ button {
       url('../images/retina/hero/herodesk@2x.jpg');
   }
 }
-
-.container.column {
+.column {
   flex-direction: column;
 }
-
 .hero-title {
   font-weight: 700;
   font-size: 36px;
@@ -422,7 +421,7 @@ button {
 }
 
 .goal-icon-box {
-  display: none; /* Mobile & Tablet – не показуємо */
+  display: none;
 }
 
 .goal-title {
@@ -448,6 +447,10 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
+  }
+
+  .goal-icon-box {
+    display: none;
   }
 
   .goal-item {
@@ -618,8 +621,6 @@ button {
 }
 
 /* portfolio section */
-
-/* === Portfolio Section Styles === */
 
 .portfolio-section {
   padding: 96px 0;
@@ -1264,30 +1265,30 @@ button {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  padding-top: 9px;
-  padding-bottom: 9px;
+  max-width: 320px;
+  height: 100vh;
+  padding: 72px 24px 24px;
   background-color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transform: translateX(100%);
   visibility: hidden;
-  transition: transform 0.3s ease-in-out;
+  transition: transform var(--transition), visibility var(--transition);
   z-index: 9999;
 }
 
-/* Клас для відкритого меню */
 .mobile-menu.is-open {
   transform: translateX(0);
   visibility: visible;
 }
 
 .mobile-menu-close {
-  align-self: flex-end;
-  display: block;
-  margin-left: auto;
-  margin-bottom: 24px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
   background: none;
   border: none;
   stroke: var(--black);
@@ -1314,28 +1315,25 @@ button {
 }
 
 .mobile-nav-link {
+  font-family: var(--font-family);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11111;
   letter-spacing: 0.02em;
   color: var(--navy-blue);
+  text-decoration: none;
 }
 
 .mobile-nav-link.current {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11111;
-  letter-spacing: 0.02em;
   color: var(--ocean);
 }
 
 .mobile-nav-link:hover,
 .mobile-nav-link:focus {
-  stroke: var(--navy-blue);
+  color: var(--hover);
 }
 
 .mobile-contact {
-  margin-bottom: 48px;
   margin-top: 168px;
   display: flex;
   flex-direction: column;
@@ -1370,8 +1368,6 @@ button {
 }
 
 .mobile-social-link {
-  display: block;
-  line-height: 0;
   width: 40px;
   height: 40px;
   display: flex;
@@ -1384,56 +1380,9 @@ button {
 
 .mobile-social-link:hover,
 .mobile-social-link:focus {
-  background-color: #404bbf;
+  background-color: var(--iris);
 }
 
 .mobile-social-icon {
   fill: var(--white);
-}
-
-/* === MOBILE FIRST === */
-
-/* По замовчуванню: мобільна версія */
-
-.nav-list,
-.address-list {
-  display: none;
-}
-
-.burger-btn {
-  display: block;
-}
-
-/* Goal icons — лише на десктопі */
-.goal-icon-box {
-  display: none;
-}
-
-/* === TABLET === */
-@media screen and (min-width: 768px) {
-  /* Ховаємо бургер */
-  .burger-btn {
-    display: none;
-  }
-
-  /* Мобільне меню повністю приховане */
-  .mobile-menu {
-    display: none !important;
-  }
-
-  /* Goal icons — все ще приховані */
-  .goal-icon-box {
-    display: none;
-  }
-}
-
-/* === DESKTOP === */
-@media screen and (min-width: 1158px) {
-  .mobile-menu {
-    display: none !important;
-  }
-
-  .burger-btn {
-    display: none;
-  }
 }
