@@ -116,8 +116,7 @@ button {
   max-width: 288px;
   padding-left: 16px;
   padding-right: 16px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -137,67 +136,40 @@ button {
   height: 56px;
   display: flex;
   align-items: center;
-  padding-top: 16px;
-  padding-bottom: 19px;
 }
 
 @media screen and (min-width: 768px) {
   .main-header {
-    height: 72px; /* Збільшуємо висоту для планшета та десктопа */
-    padding-top: 24px;
-    padding-bottom: 24px; /* Збільшені відступи для планшета та десктопа */
+    height: 72px;
   }
 }
 
 .header-flex {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  width: 100%;
+  align-items: center;
 }
 
 .main-nav {
   display: flex;
   align-items: center;
-  margin-right: auto;
 }
 
-.logo {
-  font-family: 'Raleway', sans-serif;
+.main-logo {
+  margin-right: 76px;
+  font-family: var(--second-family);
   font-weight: 700;
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #4d5ae5;
-  display: inline-block;
+  color: var(--navy-blue);
+  display: inline-flex;
+  align-items: center;
 }
 
 .logo-span {
-  color: var(--ocean);
-}
-
-/* Мобільна версія: бургер-меню */
-.burger-btn {
-  width: 24px;
-  height: 24px;
-  line-height: 0;
-  stroke: var(--navy-blue);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  align-self: flex-end; /* Вирівнюємо бургер по правому краю */
-}
-
-@media screen and (min-width: 768px) {
-  .burger-btn {
-    display: none; /* Вимикаємо бургер на планшетах та десктопах */
-  }
+  color: var(--navy-blue);
 }
 
 .nav-list {
@@ -207,19 +179,7 @@ button {
 @media screen and (min-width: 768px) {
   .nav-list {
     display: flex;
-    padding-top: 24px;
-    padding-bottom: 24px;
     gap: 40px;
-    margin-left: 118px;
-    margin-right: 118px;
-  }
-}
-
-@media screen and (min-width: 1158px) {
-  .nav-list {
-    display: flex;
-    margin-left: 76px;
-    margin-right: 332px;
   }
 }
 
@@ -233,14 +193,6 @@ button {
   padding-bottom: 24px;
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media screen and (min-width: 768px) {
-  .nav-link {
-    font-size: 16px;
-    padding: 24px 0;
-    position: relative;
-  }
 }
 
 .nav-link.current {
@@ -258,52 +210,43 @@ button {
   border-radius: 2px;
 }
 
-.main-adress {
-  display: none;
-}
-
 .address-list {
   display: none;
-  padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
 @media screen and (min-width: 768px) {
-  .main-address {
-    font-style: normal;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 12px;
+  .address-list {
+    display: flex;
+    gap: 40px;
   }
 }
 
+.address-link {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--slate);
+  transition: color 250ms ease-in-out;
+}
+
 @media screen and (min-width: 1158px) {
-  .main-address {
-    flex-direction: row;
-    font-style: normal;
-  }
-
-  .main-address .address-list {
-    list-style: none;
-  }
-
-  .address-list li {
-    margin-right: 40px;
-  }
-
-  .address-list li:last-child {
-    margin-right: 0;
-  }
   .address-link {
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
   }
-  .address-link:hover,
-  .address-link:focus {
-    color: #404bbf;
+}
+
+.burger-btn {
+  line-height: 0;
+  stroke: var(--navy-blue);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .burger-btn {
+    display: none;
   }
 }
 
@@ -319,6 +262,7 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   width: 320px;
   height: 432px;
   padding: 72px 16px 96px;
@@ -365,9 +309,7 @@ button {
   .hero-section {
     width: 1440px;
     height: 600px;
-    background-color: #2e2f42;
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding: 188px 472px 188px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -386,32 +328,44 @@ button {
   }
 }
 
+.container.column {
+  flex-direction: column;
+}
+
 .hero-title {
-  font-size: 36px;
   font-weight: 700;
-  line-height: 1.11;
-  color: white;
-  max-width: 216px;
-  max-height: 160px;
-  height: auto;
+  font-size: 36px;
+  line-height: 1.11111;
   letter-spacing: 0.02em;
-  margin: 0 auto 72px auto;
+  text-align: center;
+  color: var(--white);
+  max-width: 216px;
+  margin: 0 auto 72px;
 }
 
 .hero-button {
-  display: block;
-  min-width: 169px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 10px;
+
+  padding: 16px 32px;
+  width: 169px;
   height: 56px;
-  margin: 0 auto;
-  color: white;
-  background-color: var(--blue);
+  border-radius: 4px;
+  background: var(--iris);
+  color: var(--white);
+
+  font-family: var(--font-family);
   font-weight: 500;
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  text-align: center;
   border: none;
-  border-radius: 4px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -423,9 +377,26 @@ button {
 @media screen and (min-width: 768px) {
   .hero-title {
     font-size: 56px;
-    line-height: 1.07;
+    line-height: 1.07143;
     max-width: 496px;
     margin-bottom: 36px;
+  }
+
+  .hero-button {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07143;
+    max-width: 496px;
+    margin-bottom: 48px;
+  }
+
+  .hero-button {
+    margin: 0 auto;
   }
 }
 
@@ -448,6 +419,10 @@ button {
 
 .goal-item {
   width: 100%;
+}
+
+.goal-icon-box {
+  display: none; /* Mobile & Tablet – не показуємо */
 }
 
 .goal-title {
@@ -492,7 +467,7 @@ button {
   }
 
   .goal-item {
-    width: calc((100% - 72px) / 4);
+    width: calc((100% - 72px) / 4); /* 3 пробіли по 24px */
   }
 
   .goal-icon-box {
@@ -643,6 +618,8 @@ button {
 }
 
 /* portfolio section */
+
+/* === Portfolio Section Styles === */
 
 .portfolio-section {
   padding: 96px 0;
@@ -813,19 +790,18 @@ button {
 }
 
 .footer-text {
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  max-width: 288px;
-  margin: auto;
+  max-width: 264px;
 }
 
 .footer-social {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-self: flex-start;
   margin-right: auto;
 }
 
@@ -846,8 +822,8 @@ button {
   margin: 0;
   width: 208px;
   height: 40px;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: row;
 }
 
@@ -946,7 +922,7 @@ button {
   .footer-container {
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 72px;
   }
 
   .footer-wrapper {
@@ -957,7 +933,6 @@ button {
 
   .footer-text {
     margin: 0 auto;
-    padding-right: 24px;
   }
 
   .footer-social {
@@ -1018,35 +993,6 @@ button {
 
   .footer-button {
     margin: 0;
-  }
-}
-
-@media screen and (min-width: 1158px) {
-  .footer-container {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 50px;
-  }
-
-  .footer-wrapper {
-    text-align: start;
-  }
-
-  .footer-form-container {
-    margin-left: 80px;
-  }
-
-  .footer-subscribe-form {
-    flex-direction: row;
-    gap: 24px;
-  }
-
-  .footer-input {
-    width: 264px;
-  }
-
-  .footer-button {
-    margin-left: 16px;
   }
 }
 
