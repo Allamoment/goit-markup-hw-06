@@ -22,19 +22,22 @@
 <body>
 
     <header class="main-header">
-        <div class="container">
+        <div class="container header-flex">
+            <nav class="main-nav">
                 <a href="./index.html" class="main-logo logo">Web<span class="logo-span">Studio</span></a>
-                <div class="header-flex">
-                <nav class="main-nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="./index.html" class="nav-link current">Studio</a></li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">Portfolio</a></li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link">Contacts</a></li>
-                    </ul>
+                <ul class="nav-list main-menu">
+                    <li><a href="./index.html" class="nav-link current">Studio</a></li>
+                    <li><a href="" class="nav-link">Portfolio</a></li>
+                    <li><a href="" class="nav-link">Contacts</a></li>
+                </ul>
             </nav>
+            <address class="address main-address">
+                <ul class="address-list">
+                    <li><a href="mailto:info@devstudio.com" class="address-link contact-link">info@devstudio.com</a>
+                    </li>
+                    <li><a href="tel:+110001111111" class="address-link contact-link">+11 (000) 111-11-11</a></li>
+                </ul>
+            </address>
         </div>
     
             <address class="address main-address">
@@ -548,5 +551,44 @@
                     <a href="#" class="mobile-nav-link">Contacts</a></li>
             </ul>
         </nav>
+
+        <!-- Семантичне оформлення контактів -->
+        <address class="mobile-contact">
+            <a href="tel:+110001111111" class="phone">+11 (000) 111-11-11</a>
+            <a href="mailto:info@devstudio.com" class="email">info@devstudio.com</a>
+        </address>
+        
+        <ul class="mobile-socials">
+            <li class="mobile-socials-item">
+                <a href="#" class="mobile-social-link" aria-label="Instagram">
+                    <svg class="mobile-social-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="mobile-socials-item">
+                <a href="#" class="mobile-social-link" aria-label="Twitter">
+                    <svg class="mobile-social-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="mobile-socials-item">
+                <a href="#" class="mobile-social-link" aria-label="Facebook">
+                    <svg class="mobile-social-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="mobile-socials-item">
+                <a href="#" class="mobile-social-link" aria-label="LinkedIn">
+                    <svg class="mobile-social-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        </div>
+        </div>
 
         
