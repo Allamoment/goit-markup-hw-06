@@ -13,6 +13,10 @@
   --white: #ffffff;
   --black: #2e2f42;
   --dairy: #fcfcfc;
+  --transition: #f0f0f0;
+  --font-family: 'Arial', sans-serif;
+  --primary-transition: #000000;
+  --primary-accent-color: #4d5ae5;
 
   /* === Додаткові кольори === */
   --blue: #4d5ae5;
@@ -39,6 +43,7 @@
   --color-border-default: rgba(46, 47, 66, 0.4);
 
   /* === Шрифти === */
+  --font-family: 'Arial', sans-serif;
   --font-family: 'Inter', sans-serif;
   --font-family-accent: 'Raleway', sans-serif;
 
@@ -111,7 +116,8 @@ button {
   max-width: 288px;
   padding-left: 16px;
   padding-right: 16px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -131,13 +137,15 @@ button {
   height: 56px;
   display: flex;
   align-items: center;
-  padding: 0 16px; /* Відступи для мобільної версії */
+  padding-top: 16px;
+  padding-bottom: 19px;
 }
 
 @media screen and (min-width: 768px) {
   .main-header {
     height: 72px; /* Збільшуємо висоту для планшета та десктопа */
-    padding: 0 32px; /* Збільшені відступи для планшета та десктопа */
+    padding-top: 24px;
+    padding-bottom: 24px; /* Збільшені відступи для планшета та десктопа */
   }
 }
 
@@ -167,7 +175,7 @@ button {
 }
 
 .logo-span {
-  color: var(--navy-blue);
+  color: var(--ocean);
 }
 
 /* Мобільна версія: бургер-меню */
@@ -195,16 +203,24 @@ button {
 
 .nav-list {
   display: none;
-  padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
 @media screen and (min-width: 768px) {
   .nav-list {
     display: flex;
+    padding-top: 24px;
+    padding-bottom: 24px;
     gap: 40px;
-    margin-left: 40px; /* Відступ між елементами навігації */
+    margin-left: 118px;
+    margin-right: 118px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .nav-list {
+    display: flex;
+    margin-left: 76px;
+    margin-right: 332px;
   }
 }
 
@@ -252,25 +268,30 @@ button {
 }
 
 @media screen and (min-width: 1158px) {
-  .address-list {
-    flex-direction: row;
-    gap: 40px;
+  .address {
+    font-style: normal;
   }
-}
 
-.address-link {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: var(--slate);
-  transition: color 250ms ease-in-out;
-  white-space: nowrap;
-}
+  .main-address .address-list {
+    list-style: none;
+  }
 
-@media screen and (min-width: 1158px) {
+  .address-list li {
+    margin-right: 40px;
+  }
+
+  .address-list li:last-child {
+    margin-right: 0;
+  }
   .address-link {
     font-size: 16px;
     line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+  }
+  .address-link:hover,
+  .address-link:focus {
+    color: #404bbf;
   }
 }
 
@@ -332,7 +353,9 @@ button {
   .hero-section {
     width: 1440px;
     height: 600px;
-    padding: 188px 472px 188px;
+    background-color: #2e2f42;
+    padding-top: 188px;
+    padding-bottom: 188px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -362,32 +385,30 @@ button {
   letter-spacing: 0.02em;
   text-align: center;
   color: var(--white);
-  max-width: 216px;
-  margin: 0 auto 72px;
 }
 
 .hero-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 16px 32px;
-  width: 169px;
-  height: 56px;
+  display: block;
+  border: none;
   border-radius: 4px;
-  background: var(--iris);
-  color: var(--white);
-  font-family: var(--font-family);
+  background-color: #4d5ae5;
+  font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  text-align: center;
-  border: none;
+  color: #ffffff;
   cursor: pointer;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 auto;
+  border-radius: 4px;
+  padding: 16px 32px;
+  width: 169px;
+  height: 56px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: row;
+  gap: 10px;
 }
 
 .hero-button:hover,
@@ -398,28 +419,15 @@ button {
 @media screen and (min-width: 768px) {
   .hero-title {
     font-size: 56px;
-    line-height: 1.07143;
+    line-height: 1.07;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #ffffff;
     max-width: 496px;
-    margin-bottom: 36px;
-  }
-
-  .hero-button {
-    margin: 0 auto;
+    margin: 0 auto 48px;
   }
 }
 
-@media screen and (min-width: 1158px) {
-  .hero-title {
-    font-size: 56px;
-    line-height: 1.07143;
-    max-width: 496px;
-    margin-bottom: 48px;
-  }
-
-  .hero-button {
-    margin: 0 auto;
-  }
-}
 /* goal section */
 
 .goal-section {
@@ -804,12 +812,12 @@ button {
 }
 
 .footer-text {
-  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  max-width: 264px;
+  max-width: 288px;
+  margin: auto;
 }
 
 .footer-social {
@@ -948,6 +956,7 @@ button {
 
   .footer-text {
     margin: 0 auto;
+    padding-right: 24px;
   }
 
   .footer-social {
@@ -1308,9 +1317,9 @@ button {
   top: 0;
   left: 0;
   width: 100%;
-  max-width: 320px;
-  height: 100vh;
-  padding: 72px 24px 24px;
+  height: 100%;
+  padding-top: 9px;
+  padding-bottom: 9px;
   background-color: var(--white);
   display: flex;
   flex-direction: column;
@@ -1327,17 +1336,11 @@ button {
   visibility: visible;
 }
 
-.mobile-menu.is-open {
-  transform: translateX(0);
-  visibility: visible;
-}
-
 .mobile-menu-close {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 24px;
-  height: 24px;
+  align-self: flex-end;
+  display: block;
+  margin-left: auto;
+  margin-bottom: 24px;
   background: none;
   border: none;
   stroke: var(--black);
@@ -1364,25 +1367,28 @@ button {
 }
 
 .mobile-nav-link {
-  font-family: var(--font-family);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11111;
   letter-spacing: 0.02em;
   color: var(--navy-blue);
-  text-decoration: none;
 }
 
 .mobile-nav-link.current {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
   color: var(--ocean);
 }
 
 .mobile-nav-link:hover,
 .mobile-nav-link:focus {
-  color: var(--hover);
+  stroke: var(--navy-blue);
 }
 
 .mobile-contact {
+  margin-bottom: 48px;
   margin-top: 168px;
   display: flex;
   flex-direction: column;
@@ -1417,6 +1423,8 @@ button {
 }
 
 .mobile-social-link {
+  display: block;
+  line-height: 0;
   width: 40px;
   height: 40px;
   display: flex;
@@ -1429,7 +1437,7 @@ button {
 
 .mobile-social-link:hover,
 .mobile-social-link:focus {
-  background-color: var(--hover);
+  background-color: #404bbf;
 }
 
 .mobile-social-icon {
@@ -1453,13 +1461,6 @@ button {
 /* Goal icons — лише на десктопі */
 .goal-icon-box {
   display: none;
-}
-
-/* Mobile menu показується лише при is-open */
-.mobile-menu.is-open {
-  display: flex;
-  transform: translateX(0);
-  visibility: visible;
 }
 
 /* === TABLET === */
