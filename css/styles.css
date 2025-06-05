@@ -251,6 +251,12 @@ button {
   }
 }
 
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  margin: 0;
+}
+
 /* hero section */
 
 .hero-section {
