@@ -18,6 +18,7 @@
   --primary-transition: #000000;
   --primary-accent-color: #4d5ae5;
   --lightest-dark-blue: #2e2f42;
+  --grey-lightest: #f4f4fd;
 
   /* === Додаткові кольори === */
   --blue: #4d5ae5;
@@ -119,22 +120,17 @@ button {
   align-items: center;
   max-width: 288px;
   margin: 0 auto;
-  padding-top: 16px;
 }
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 736px;
-    padding-top: 24px;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
@@ -177,16 +173,6 @@ button {
 }
 
 .main-logo {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #4d5ae5;
-  display: inline-block;
-  width: 115px;
-  height: 24px;
   margin-right: 0;
 }
 
@@ -200,6 +186,20 @@ button {
   .main-logo {
     margin-right: 76px;
   }
+}
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
+  display: inline-block;
+  width: 115px;
+  height: 24px;
+  margin-right: 0;
 }
 
 .logo-span {
@@ -224,14 +224,13 @@ button {
 }
 
 .nav-link {
+  font-size: 16px;
+  padding: 24px 0;
   display: block;
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  padding-top: 24px;
-  padding-bottom: 24px;
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -269,12 +268,22 @@ button {
 @media screen and (min-width: 768px) {
   .main-address {
     max-width: 120px;
+    display: flex;
+    margin-left: auto;
+    margin-top: 0;
+    position: static;
+    font-style: normal;
+    z-index: 0;
+    transition: right 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    width: 100%;
   }
 
   .address-list {
     flex-direction: column;
     gap: 10px;
     justify-content: center;
+    flex-shrink: 1;
     display: flex;
     align-items: center;
     margin: 0;
@@ -285,10 +294,8 @@ button {
 
 @media screen and (min-width: 1158px) {
   .address-list {
-    flex-direction: row;
     gap: 42px;
-    margin: 0;
-    padding: 0;
+    margin-left: auto;
   }
 }
 
@@ -330,7 +337,6 @@ button {
   height: 24px;
   padding: 0;
   margin-left: auto;
-  align-self: flex-end;
 }
 
 @media screen and (min-width: 768px) {
@@ -341,12 +347,6 @@ button {
 
 .menu-burger-icon {
   stroke: #000000;
-}
-
-.section {
-  padding-top: 120px;
-  padding-bottom: 120px;
-  margin: 0;
 }
 
 /* hero section */
@@ -433,6 +433,7 @@ button {
   justify-content: center;
   width: 100%;
   height: 100%;
+  padding: 0 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -459,16 +460,7 @@ button {
 @media screen and (min-width: 768px) {
   .hero-title {
     font-size: 56px;
-    line-height: 1.07;
-    margin-bottom: 36px;
-    max-width: 496px;
     text-align: center;
-  }
-}
-
-@media screen and (min-width: 1158px) {
-  .hero-title {
-    margin: 0 auto 48px;
   }
 }
 
@@ -599,9 +591,15 @@ button {
 
 .team-section {
   background-color: #f4f4fd;
-  padding-top: 120px;
-  padding-bottom: 120px;
   text-align: center;
+  padding: 96px 0;
+}
+
+@media screen and (min-width: 1158px) {
+  .team-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 
 .team-title {
@@ -623,20 +621,28 @@ button {
   margin: 0;
   list-style: none;
 }
+@media screen and (min-width: 768px) {
+  .team-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    gap: 64px 24px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .team-list {
+    margin: 0 12px;
+  }
+}
 
 .team-item {
-  width: 264px;
-  background-color: #ffffff;
+  background-color: var(--white);
   border-radius: 0 0 4px 4px;
-  box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08), 0 1px 1px rgba(46, 47, 66, 0.16),
-    0 1px 6px rgba(46, 47, 66, 0.08);
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 2px 1px 0 var(--grey-ligtest), 0 1px 1px 0 var(--grey-ligtest),
+    0 1px 6px 0 var(--grey-ligtest);
+  justify-items: center;
   align-items: center;
-  gap: 32px;
-  padding-bottom: 32px;
-  max-width: 100%;
-  box-sizing: border-box;
 }
 
 .team-item img {
@@ -867,6 +873,9 @@ button {
 .footer-container {
   display: flex;
   padding: 0 15px;
+}
+
+.baseline {
   align-items: baseline;
 }
 
