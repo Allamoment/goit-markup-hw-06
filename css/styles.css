@@ -120,24 +120,18 @@ button {
   max-width: 288px;
   margin: 0 auto;
   padding-top: 16px;
-  padding-bottom: 19px;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 736px;
     padding-top: 24px;
-    padding-bottom: 24px;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
-    padding-left: 156px;
-    padding-right: 156px;
     margin: 0 auto;
   }
 }
@@ -153,18 +147,24 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 56px;
+  width: 100%;
+  height: 100%;
+  padding: 0 16px;
 }
 
 @media screen and (min-width: 768px) {
   .header-flex {
-    height: 72px;
+    margin: 0 auto;
+    max-width: 1158px;
+    padding: 0 15px;
   }
 }
 
 .main-nav {
+  width: 100%;
   display: flex;
   align-items: center;
+  margin-right: auto;
 }
 
 .main-logo {
@@ -183,7 +183,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .main-logo {
-    margin-right: 118px;
+    margin-right: 120px;
   }
 }
 
@@ -204,10 +204,13 @@ button {
 @media screen and (min-width: 768px) {
   .nav-list {
     display: flex;
-    gap: 40px;
     list-style: none;
     margin: 0;
-    padding: 0;
+    font-weight: 500;
+    padding: 24px 0;
+    gap: 40px;
+    max-height: 72px;
+    z-index: 0;
   }
 }
 
@@ -255,20 +258,26 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  .main-address {
+    max-width: 120px;
+  }
+
   .address-list {
-    display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-left: 0;
     list-style: none;
-    margin-left: auto;
-    padding: 0;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .address-list {
     flex-direction: row;
-    gap: 40px;
+    gap: 42px;
   }
 }
 
@@ -301,7 +310,7 @@ button {
   height: 24px;
   padding: 0;
   margin-left: auto;
-  align-self: center;
+  align-self: flex-end;
 }
 
 @media screen and (min-width: 768px) {
@@ -397,7 +406,7 @@ button {
       url('../images/retina/hero/herodesk@2x.jpg');
   }
 }
-.container.column {
+.column {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -407,7 +416,7 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .container.column {
+  .column {
     margin: 0 auto;
     align-items: center;
     max-width: 1158px;
@@ -839,9 +848,6 @@ button {
 .footer-container {
   display: flex;
   padding: 0 15px;
-}
-
-.footer-container.baseline {
   align-items: baseline;
 }
 
@@ -998,10 +1004,17 @@ button {
 
 /* === MEDIA 768px === */
 @media screen and (max-width: 767px) {
+  .main-footer {
+    padding: 96px 93px;
+    height: auto;
+    min-height: 456px;
+  }
+
   .footer-container {
     flex-direction: column;
     align-items: center;
-    gap: 72px;
+    flex-wrap: wrap;
+    gap: 72px 24px;
   }
 
   .footer-wrapper {
@@ -1012,9 +1025,14 @@ button {
 
   .footer-text {
     margin: 0 auto;
+    text-align: start;
   }
 
   .footer-social {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    gap: 16px;
     align-items: center;
     justify-content: center;
   }
@@ -1053,6 +1071,10 @@ button {
     flex-wrap: wrap;
     row-gap: 72px;
     justify-content: space-between;
+  }
+
+  .footer-social {
+    gap: 0;
   }
 
   .footer-wrapper {
