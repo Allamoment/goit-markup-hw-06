@@ -486,23 +486,27 @@ button {
   overflow: hidden;
 }
 
+.goal-section {
+  background-color: #ffffff;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
 .goal-list {
   display: flex;
+  flex-direction: column;
+  gap: 72px;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.goal-list li {
-  margin-right: 24px;
-}
-
-.goal-list li:last-child {
-  margin-right: 0;
-}
-
 .goal-item {
   width: 100%;
+}
+
+.goal-icon-box {
+  display: none; /* Mobile & Tablet – не показуємо */
 }
 
 .goal-title {
@@ -523,19 +527,11 @@ button {
   margin: 0;
 }
 
-.goal-icon-box {
-  display: none;
-}
-
 @media screen and (min-width: 768px) {
   .goal-list {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
-  }
-
-  .goal-icon-box {
-    display: none;
   }
 
   .goal-item {
@@ -624,12 +620,12 @@ button {
 }
 
 .team-box {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  text-align: center;
-  padding-left: 0;
-  padding-right: 0;
-  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 16px;
 }
 
 .team-name {
@@ -1005,17 +1001,10 @@ button {
 
 /* === MEDIA 768px === */
 @media screen and (max-width: 767px) {
-  .main-footer {
-    padding: 96px 93px;
-    height: auto;
-    min-height: 456px;
-  }
-
   .footer-container {
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 72px 24px;
+    gap: 72px;
   }
 
   .footer-wrapper {
@@ -1026,14 +1015,9 @@ button {
 
   .footer-text {
     margin: 0 auto;
-    text-align: start;
   }
 
   .footer-social {
-    display: flex;
-    flex-direction: column;
-    height: 80px;
-    gap: 16px;
     align-items: center;
     justify-content: center;
   }
@@ -1066,16 +1050,13 @@ button {
   }
 }
 
+/* === MEDIA 768–1157px (Tablet) === */
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .footer-container {
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 72px;
     justify-content: space-between;
-  }
-
-  .footer-social {
-    gap: 0;
   }
 
   .footer-wrapper {
